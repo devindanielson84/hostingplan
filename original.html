@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .body{
+        background-image:linear-gradient(rgb(177, 41, 177),rgb(115, 206, 236)) ;
+    }
+    .h1{
+        text-align: center;
+        color: silver;
+    }
+    .center{
+        margin: auto;
+        width: 20%;
+        border: 3px solid black ;
+        color: white;
+        border-style: double;
+    }
+    .h2{
+        text-align: center;
+    }
+    .list{
+        text-align: center;
+        list-style-type: none;
+    }
+
+
+</style>
+<script>
+    function plan(name,)
+    this.name =name;
+    this.price =price;
+    this.space = space;
+        var plan1 = {
+            name: "Basic",
+            price: 3.99,
+            space: 100,
+            transfer: 1000,
+            pages: 10,
+            discountMonths: [0, 7]
+        };
+
+
+
+            var plan2 = {
+            name: "Professional",
+            price: 5.99,
+            space: 500,
+            transfer: 5000,
+            pages: 50,
+            discountMonths: [0, 7, 11]
+        };
+
+        var plan3 = {
+            name: "Ultimate",
+            price: 9.99,
+            space: 2000,
+            transfer: 20000,
+            pages: 500,
+            discountMonths: [0, 7]
+        };
+        function calcAnnual(percentIfDisc) {
+                var bestPrice = plan1.price;
+                console.log("Price" + bestPrice);
+                var currDate = new Date();
+                console.log("Current Date " +currDate);
+                var thisMo = currDate.getMonth();
+                console.log("This Month " +thisMo);
+                for (var i = 0; i < plan1.discountMonths.length; i++) {
+
+                if (plan1.discountMonths[i] === thisMo) {
+                bestPrice = plan1.price * percentIfDisc;
+                break;}
+                console.log("Best Price" +bestPrice);
+                }
+                return bestPrice * 12;
+                }
+
+
+
+                //var annualPrice = calcAnnual(.85);//
+                //alert("Annual Price" +annualPrice);//
+
+        function calcAnnual() {
+                var bestPrice = plan1.price;
+                console.log("Price" + bestPrice);
+                var currDate = new Date();
+                console.log("Current Date " +currDate);
+                var thisMo = currDate.getMonth();
+                console.log("This Month " +thisMo);
+                for (var i = 0; i < plan1.discountMonths.length; i++) {
+
+                if (plan1.discountMonths[i] === thisMo) {
+                bestPrice = plan1.price * .8;
+                break;}
+                console.log("Best Price" +bestPrice);
+                }
+                return bestPrice * 12;
+                }
+
+
+         var annualPrice = calcAnnual();
+                alert("Annual Price" +annualPrice);
+    </script>
+<body class="body">
+ <h1 class="h1">hosting plan</h1>
+ <h2 class="h2">plan 1</h2>
+    <div class="center">
+       <ul class="list">
+         <li>plan name: basic</li>
+         <br>
+         <li>monthly price: 3.99</li>
+         <br>
+         <li>disk space: 100</li>
+         <br>
+         <li>data trasnfer: 1000</li>
+         <br>
+         <li>site pages: 10</li>
+         <br>
+         <li>discountMonths: 0,7 </li>
+         <br>
+         <input type="submit" value="submit">
+        </ul>
+    </div> 
+    <br>
+    <h2 class="h2">plan 2</h2>
+  <div class="center">
+       <ul class="list"> 
+         <li>plan name: professional</li>
+         <br>
+         <li>monthly price: 5.99</li>
+         <br>
+         <li>disk space: 500</li>
+         <br>
+         <li>data transfer: 5000</li>
+         <br>
+         <li>site pages: 50</li>
+         <br>
+          <li>discountMonths: 0,7 </li>
+         <br>
+          <input type="submit" value="submit">
+        </ul>
+  </div>
+
+    <h2 class="h2">plan 3</h2>
+    <div class="center">
+       <ul class="list">
+         <li>plan name: ultimate</li>
+         <br>
+         <li>monthly price: 9.99</li>
+         <br>
+         <li>disk space: 2000</li>
+         <br>
+         <li>data transfer: 20000</li>
+         <br>
+         <li>site pages: 500</li>
+         <br>
+         <li>discountMonths: 0,7 </li>
+         <br>
+         <input type="submit" value="submit">
+        </ul>
+   </div>
+
+ 
+</body>
+</html>
